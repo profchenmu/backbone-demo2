@@ -1,0 +1,76 @@
+.no-logged{
+	.root-view{
+		background: transparent;
+    	border: none;
+	}
+	
+	.form-holder{
+		background: #fff;
+		border: 1px solid #ddd;
+		.error-msg{
+			width: 100%;
+			height: 30px;
+			line-height: 20px;
+			color: red;
+		}
+		width: 420px;
+		height: 320px;
+		float: right;
+		margin-right: 18%;
+		padding: 26px 40px;
+		.form-group{
+			&:first-child{
+				border-bottom: none;
+			}
+			position: relative;
+			margin-bottom: 0;
+			border: 1px solid @bkgray;
+			span{
+				position: absolute;
+				font-size: 22px;
+				top: 16px;
+				left: 18px;
+				color: #999;
+				&.icon-locked{
+					left: 16px;
+				}
+			}
+		}
+		.auth-login{
+			padding-left: 50px;
+			height: 55px;
+			width: 100%;
+			margin: 0;
+			border: none;
+		}
+		#submit-login{
+			width: 154px;
+			height: 46px;
+			margin-top: 20px;
+		}
+		.tooltip-inner{
+			max-width: 300px;
+			background: #FFFEEE;
+			color: #666666;
+			border: #FFB973 1px solid;
+			text-align: left;
+		}
+		.help{
+			color: @midblue;
+			position: absolute;
+		    margin-top: 30px;
+		    margin-left: 20px;
+		    span{
+		    	margin-right: 5px;
+		    }
+		}
+		.tooltip-arrow{
+			border-color: #FFFEEE; 
+		}
+
+	}
+	.footer{
+		top: 800px;
+		position: absolute;
+	}
+}

@@ -1,0 +1,52 @@
+{
+    "menu": [
+        {
+            "name": "index",
+            "url": "#index",
+            "title": "平台首页",
+            "desc": "平台首页"
+        },
+        {
+            "name": "manage",
+            "url": "#manage",
+            "title": "账户&权限管理",
+            "desc": "管理员／操作员列表"
+        },
+        {
+            "name": "devide",
+            "url": "#devide",
+            "title": "福利资金划拨",
+            "desc": "资金划拨"
+        },
+        {
+            "name": "distribute",
+            "url": "#distribute",
+            "title": "福利发放",
+            "desc": "福利发放"
+        },
+        {
+            "name": "disinfos",
+            "url": "#disinfos",
+            "title": "发放记录",
+            "desc": "发放记录"
+        },
+        {
+            "name": "devinfos",
+            "url": "#devinfos",
+            "title": "划拨记录",
+            "desc": "划拨记录"
+        },
+        {
+            "name": "auth",
+            "url": "#auth",
+            "title": "安全验证配置",
+            "desc": "安全验证配置"
+        },
+        {
+            "name": "empinfo",
+            "url": "#empinfo",
+            "title": "员工信息导入",
+            "desc": "员工信息导入"
+        }
+    ]
+}
