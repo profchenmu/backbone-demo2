@@ -16,6 +16,7 @@ module.exports = {
 		application: path.resolve('app/application'),
 		core: path.resolve('app/core'),
 		share: path.resolve('app/share'),
-		modules: path.resolve('app/modules')
+		modules: path.resolve('app/modules'),
+		vendor: path.resolve('app/vendor')
 	}
 };

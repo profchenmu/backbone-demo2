@@ -15,11 +15,10 @@ define([
 
         controller: {
             index: function() {
-                alert('cao');
-                    var layout = new LayoutView();
-                    if(App.rootView){
-                        App.rootView.getRegion('main').show(layout);
-                    }
+                var layout = new LayoutView();
+                if(App.rootView){
+                    App.rootView.getRegion('main').show(layout);
+                }
 
             }
         }

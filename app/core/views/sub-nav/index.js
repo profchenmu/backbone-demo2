@@ -30,6 +30,70 @@ define([
 
         onRender: function(){
             var self = this;
+            if(window.sessionStorage.getItem('menuGroups')===null){
+                // App.menuGroups = ['index'];
+                App.menuGroups = ['index', 'check_devide', 'check_distribute'];
+                App.subGroups = [];
+                this.navModel = new NavModel();
+
+                this.navModel.fetch({
+                    data: {
+                        serviceId: 4000330000001001,
+                        t: new Date().valueOf()
+                    },
+                    reset: true,
+                    success: function(model,msg){
+                        $('#main').removeClass('no-logged');
+                        var childrens = model.get('children');
+                        _.each(model.get('children'), function(e){
+                            if(e.hidden===false){
+                                App.menuGroups.push(e.name);
+                                if(e.children){
+                                    var menuSub = {
+                                        name: e.name,
+                                        children: []
+                                    };
+                                    _.each(e.children, function(f){
+                                        if(f.hidden===false){
+                                            menuSub.children.push(f.name);
+                                        }
+                                    });
+                                    App.subGroups.push(menuSub);
+                                }
+                            }
+                        });
+                        self.navModel.fetch({
+                            reset: true,
+                            data: {
+                                serviceId: 4000330000001002,
+                                t: new Date().valueOf(),
+                            },
+                            success: function(model, msg){
+                                if(msg.code==='00'){
+                                    var btnAuthTemp = msg.button_auth;
+                                    
+                                    window.sessionStorage.setItem('btnAuth', btnAuthTemp);
+                                    App.btnAuth = btnAuthTemp;
+
+                                    window.sessionStorage.setItem('menuGroups', App.menuGroups);
+                                    window.sessionStorage.setItem('subGroups', JSON.stringify(App.subGroups));
+                                    self._checkMenus();
+                                    self._renderSubNav();
+                                    
+
+                                }
+                            }
+                        });
+                        
+                    }
+                });
+
+            }else{
+                App.menuGroups = window.sessionStorage.getItem('menuGroups').split(',');
+                self._renderSubNav();
+                self._checkMenus();
+                App.btnAuth = window.sessionStorage.getItem('btnAuth');
+            }
         },
 
         _checkMenus: function(){

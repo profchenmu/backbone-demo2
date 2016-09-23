@@ -83,7 +83,7 @@
 						<input id="lefile" type="file"  class="hide" name="efile">
 						<input id="upload-file" type="hidden" >
 						<input id="orgname" type="hidden" >
-						<a id="upload-button" class="btn btn-default btn-transparent" ><img src="images/up.png">  上传发放文件</a>
+						<a id="upload-button" class="btn btn-default btn-transparent" ><img src="/images/up.png">  上传发放文件</a>
 				    	<a target="_blank" id="download-button"  class="btn btn-default btn-transparent"  href="<%=url%>"><img src="images/down.png">  下载模板文件</a>
 				    	<br><br>
 				    	发放文件说明：<br>

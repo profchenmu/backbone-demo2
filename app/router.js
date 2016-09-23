@@ -6,8 +6,22 @@ define([
     'application',
     'core/views/root-view/root-view',
     'modules/no-login/router',
-    'modules/home/router'
-], function(_, Backbone, Marionette, Radio, App, RootView, NoLogged, HomeRouter) {
+    'modules/home/router',
+    'modules/manage/router',
+    'modules/devide/router',
+    'modules/home/router',
+    'modules/distribute/router',
+
+    'modules/disinfos/router',
+    'modules/devinfos/router',
+    'modules/auth/router',
+    'modules/empinfos/router',
+    'modules/disabled/disabled',
+    // 'modules/checkDevide/router',
+    // 'modules/checkDistribute/router',
+], function(_, Backbone, Marionette, Radio, App, RootView, NoLogged, HomeRouter,
+    DistributeRouter, 
+    DisinfosRouter, DevinfosRouter, AuthRouter, EmpinfosRouter, Disabled) {
     'use strict';
 
     var Router = Marionette.AppRouter.extend({
@@ -47,7 +61,14 @@ define([
 
     App.subRouters = [
         NoLogged,
-        HomeRouter
+        HomeRouter,
+        Disabled,
+        DistributeRouter,
+        DisinfosRouter,
+        DevinfosRouter,
+        AuthRouter,
+        NoLogged,
+        EmpinfosRouter
     ];
     App.addInitializer(function() {
         var rootView = new RootView(),

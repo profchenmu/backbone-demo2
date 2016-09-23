@@ -11,7 +11,7 @@ define([
     'vendor/bootstrap-datepicker',
     'vendor/chosen',
     'vendor/bootstrap-treeview'
-], function(_, Marionette, Radio, layout,App,NavModel,budgetModel,ConfirmModal, MessageModal) {
+], function(_, Marionette, Radio, layout, App, NavModel, budgetModel, chosen, ConfirmModal, MessageModal) {
 
     'use strict';
 

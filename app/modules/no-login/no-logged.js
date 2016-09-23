@@ -119,6 +119,32 @@ define([
                 }
             });
 
+            // $.ajax({
+            //     url: 'api/login.do',
+            //     reset: true,
+            //     data: {
+            //         userName: userName,
+            //         password: passWord,
+            //         t: new Date().valueOf()
+            //     },
+            //     success: function(model,msg){
+            //         if(msg.code == '00'){
+            //             App.logged = true;
+            //             App.userName = msg.userName;
+            //             window.sessionStorage.setItem('logged', App.logged);
+            //             window.sessionStorage.setItem('userName', App.userName);
+                        
+            //             self._login();
+            //             $('.btn').removeAttr('disabled');
+            //         }else{
+            //             App.logged = false;
+            //             self.ui.errorMsg.text(msg.message);
+            //             $('.btn').removeAttr('disabled');
+            //         }
+                    
+            //     }
+            // });
+
         },
 
     });

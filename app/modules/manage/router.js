@@ -21,6 +21,7 @@ define([
 
         controller: {
             index: function() {
+                console.log(App);
                 if(App.logged){
 
                     var hash = window.location.hash.replace('#','');

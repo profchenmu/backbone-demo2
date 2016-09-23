@@ -3,8 +3,9 @@ define([
     'marionette',
     './treeView.tpl',
     'vendor/bootstrap-treeview',
-    'core/navModel'
-], function(_, Marionette,treeViewTpl, BootstrapTree, NavModel) {
+    'core/navModel',
+    'numeral',
+], function(_, Marionette,treeViewTpl, BootstrapTree, NavModel, numeral) {
     'use strict';
     return Marionette.CompositeView.extend({
        
