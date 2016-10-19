@@ -18,5 +18,6 @@ module.exports = {
 		share: path.resolve('app/share'),
 		modules: path.resolve('app/modules'),
 		vendor: path.resolve('app/vendor')
-	}
+	},
+	target: 'http://172.20.20.155:8088'
 };

@@ -6,12 +6,14 @@ define([
     'application',
     'core/navModel',
     'core/budgetModel',
+    'numeral',
     './modal/confirmModalView',
     './modal/messageModalView',
+    'vendor/bootstrapValidator',
     'vendor/bootstrap-datepicker',
     'vendor/chosen',
     'vendor/bootstrap-treeview'
-], function(_, Marionette, Radio, layout, App, NavModel, budgetModel, chosen, ConfirmModal, MessageModal) {
+], function(_, Marionette, Radio, layout, App, NavModel, budgetModel, numeral, ConfirmModal, MessageModal, bootstrapValidator) {
 
     'use strict';
 

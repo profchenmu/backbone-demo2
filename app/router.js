@@ -17,11 +17,11 @@ define([
     'modules/auth/router',
     'modules/empinfos/router',
     'modules/disabled/disabled',
-    // 'modules/checkDevide/router',
-    // 'modules/checkDistribute/router',
+    'modules/checkDevide/router',
+    'modules/checkDistribute/router',
 ], function(_, Backbone, Marionette, Radio, App, RootView, NoLogged, HomeRouter,
     DistributeRouter, 
-    DisinfosRouter, DevinfosRouter, AuthRouter, EmpinfosRouter, Disabled) {
+    DisinfosRouter, DevinfosRouter, AuthRouter, EmpinfosRouter, Disabled, CheckDevideRouter, CheckDistributeRouter) {
     'use strict';
 
     var Router = Marionette.AppRouter.extend({
@@ -68,7 +68,9 @@ define([
         DevinfosRouter,
         AuthRouter,
         NoLogged,
-        EmpinfosRouter
+        EmpinfosRouter,
+        CheckDevideRouter,
+        CheckDistributeRouter
     ];
     App.addInitializer(function() {
         var rootView = new RootView(),

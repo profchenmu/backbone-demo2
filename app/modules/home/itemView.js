@@ -21,7 +21,6 @@ define([
             var data = this.model.toJSON();
             data.fundBalance = numeral(data.fundBalance).format('0,0.00');
             data.totalRemit = numeral(data.totalRemit).format('0,0.00');
-
             data.totalWelfare = numeral(data.totalWelfare).format('0,0.00');
             return data;
         },

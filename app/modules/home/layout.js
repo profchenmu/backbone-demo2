@@ -20,8 +20,6 @@ define([
 
         initialize: function(){    
             Radio.channel('heada').trigger('aaa', ['index','平台首页']);
-            
-
         },
 
         onRender: function(){

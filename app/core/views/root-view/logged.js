@@ -37,6 +37,7 @@ define([
 
         onRender: function() {
             var self = this;
+            console.log(App);
             this.getRegion('subNav').show(new NavView());
         },
 

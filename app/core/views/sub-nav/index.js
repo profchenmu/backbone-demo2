@@ -31,8 +31,8 @@ define([
         onRender: function(){
             var self = this;
             if(window.sessionStorage.getItem('menuGroups')===null){
-                // App.menuGroups = ['index'];
-                App.menuGroups = ['index', 'check_devide', 'check_distribute'];
+                App.menuGroups = ['index'];
+                // App.menuGroups = ['index', 'check_devide', 'check_distribute'];
                 App.subGroups = [];
                 this.navModel = new NavModel();
 
@@ -43,6 +43,7 @@ define([
                     },
                     reset: true,
                     success: function(model,msg){
+                        console.log(msg);
                         $('#main').removeClass('no-logged');
                         var childrens = model.get('children');
                         _.each(model.get('children'), function(e){
@@ -145,7 +146,7 @@ define([
 
         _renderSubNav: function() {
             var self = this;
-            var mainRouteNames = ['index', 'manage', 'devide', 'distribute', 'disinfos', 'devinfos', 'auth', 'manage/addUser', 'empinfo', 'empinfo/upload'];
+            var mainRouteNames = ['index', 'manage', 'devide', 'distribute', 'disinfos', 'devinfos', 'auth', 'manage/addUser', 'empinfo', 'empinfo/upload', 'check_devide', 'check_distribute'];
             var disabledItems = _.difference(mainRouteNames, App.menuGroups);
             App.disabledItems = disabledItems;
             

@@ -13,6 +13,18 @@
             "desc": "管理员／操作员列表"
         },
         {
+            "name": "check_devide",
+            "url": "#check_devide",
+            "title": "资金划拨审核",
+            "desc": "资金划拨审核"
+        },
+        {
+            "name": "check_distribute",
+            "url": "#check_distribute",
+            "title": "福利发放审核",
+            "desc": "福利发放审核"
+        },
+        {
             "name": "devide",
             "url": "#devide",
             "title": "福利资金划拨",

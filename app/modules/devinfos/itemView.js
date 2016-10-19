@@ -4,7 +4,7 @@ define([
     './itemView.tpl',
     'core/navModel',
     'numeral'
-], function(_, Marionette, ItemViewTpl, ModalModel) {
+], function(_, Marionette, ItemViewTpl, ModalModel, numeral) {
     'use strict';
 
     return Marionette.ItemView.extend({
