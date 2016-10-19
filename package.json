@@ -11,13 +11,13 @@
     "backbone.radio": "^1.0.5",
     "backbone.select": "^1.5.4",
     "bootstrap-treeview": "^1.2.0",
-    "ejs": "^2.5.1",
     "jquery": "^3.1.0",
     "lodash": "^4.14.2",
     "numeral": "^1.5.3"
   },
   "devDependencies": {
-    "babel-runtime": "^6.9.2",
+    "ejs": "^2.5.1",
+    "ejs-loader": "^0.3.0",
     "webpack": "^1.13.1"
   }
 }
